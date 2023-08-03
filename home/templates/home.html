@@ -129,11 +129,21 @@
         <th>Name</th>
         <th>Age</th>
         <th>Image</th>
+        <th>Eligibility</th>
       </tr>
       {% for user in people %}
       <tr>
         <td>{{user.name}}</td>
         <td>{{user.age}}</td>
+
+        <td>
+          {% if user.age >= 18 %}
+          Vote
+          {% else %}
+          N/A
+          {% endif %}
+
+        </td>
         <td><img src="https://picsum.photos/seed/picsum/50/60" alt="Jane Doe"></td>
       </tr>
       {% endfor %}

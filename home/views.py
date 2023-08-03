@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import response
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -14,4 +14,6 @@ def home(response):
         {'name': 'DeepanShu chaurasiya', 'age':16},
         {'name': 'Sandeep', 'age' : 63}
     ]
+    # print(peoples)
     return render(response,'home.html',context={'people':peoples})
+    # return HttpResponse(peoples)
